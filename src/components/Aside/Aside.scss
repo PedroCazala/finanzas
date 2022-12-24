@@ -1,6 +1,7 @@
 .aside{
     position:fixed;
     display: flex;
+    z-index: 2;
 
     height: 100vh;
     button{
@@ -24,6 +25,7 @@
                 flex-flow: column;
                 a{
                     text-decoration: none;
+                    white-space: break-spaces;
                 }
                 .active{
                     background-color: rgb(45, 181, 211);

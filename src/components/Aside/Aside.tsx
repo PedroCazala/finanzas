@@ -26,7 +26,6 @@ function Aside() {
                                 className="navbar-brand"
                                 onClick={() => onChangeValueAside()}
                             >
-                                {" "}
                                 Contar Efectivo
                             </NavLink>
                             <NavLink
@@ -34,7 +33,6 @@ function Aside() {
                                 className="navbar-brand"
                                 onClick={() => onChangeValueAside()}
                             >
-                                {" "}
                                 Calculadora de meta financiera
                             </NavLink>
                         </div>

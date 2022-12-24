@@ -70,7 +70,6 @@ function FinancialGoalCalculator() {
                         <span className="input-group-text">%</span>
                     </div>
                 </div>
-                <button className="btn btn-primary"> Calcular </button>
             </form>
             {necessaryMoney ? (
                 <p>
