@@ -29,6 +29,14 @@ function Aside() {
                                 {" "}
                                 Contar Efectivo
                             </NavLink>
+                            <NavLink
+                                to="/meta-financiera"
+                                className="navbar-brand"
+                                onClick={() => onChangeValueAside()}
+                            >
+                                {" "}
+                                Calculadora de meta financiera
+                            </NavLink>
                         </div>
                     </nav>
                 </aside>

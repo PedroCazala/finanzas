@@ -1,0 +1,18 @@
+.FinancialGoalCalculator{
+    input,select,.input-group {
+        width: 80%;
+        margin: auto;
+    }
+    form{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        .form-container{
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            gap: 2rem;
+            margin: 2rem;
+        }
+    }
+}
