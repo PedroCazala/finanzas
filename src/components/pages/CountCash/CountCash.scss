@@ -1,11 +1,19 @@
-.CountCash{
-    li{
-        list-style: none;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-        label{
-            width: 9rem;
+.CountCash {
+    ul {
+        width: 80%;
+        margin: auto;
+        padding: 0;
+        li {
+            list-style: none;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            input {
+                width: 100%;
+            }
+            label {
+                width: 9rem;
+            }
         }
     }
 }
