@@ -5,11 +5,18 @@
     height: 100vh;
     button{
         border-radius: 0;
-        transition: width 2s 2s;
+        // transition: width 2s 2s;
+        padding: 0;
+        width: 6vw;
+        img{
+            width: 100%;
+        }
     }
     .menu{
-        width: 80vw;
-        transition: width 2s 2s;
+        width: 70vw;
+        display: flex;
+        justify-content: center;
+        // transition: width 2s 2s;
         nav{
             border: none;
             div{
@@ -18,7 +25,20 @@
                 a{
                     text-decoration: none;
                 }
+                .active{
+                    background-color: rgb(45, 181, 211);
+                    border-radius: 5px;
+                    padding: 7px 20px;
+                }
             }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .aside{
+        button{
+            width: 10vw;
         }
     }
 }

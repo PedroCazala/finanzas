@@ -11,6 +11,17 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  main{
+    width: 100vw;
+    padding-left: 6vw;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .App{
+    ain{
+      padding-left: 10vw;
+    }
+  }
 }
 @media only screen and (max-width: 501px) {
   .App{

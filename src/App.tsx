@@ -9,10 +9,12 @@ function App() {
         <div className="App">
             <Router>
                 <Aside/>
-                <Routes>
-                    <Route path="/" element={<p>Este es el index</p>} />
-                    <Route path="/contar-efectivo" element={<CountCash/>} />
-                </Routes>
+                <main>
+                    <Routes>
+                        <Route path="/" element={<p>Este es el index</p>} />
+                        <Route path="/contar-efectivo" element={<CountCash/>} />
+                    </Routes>
+                </main>
             </Router>
         </div>
     );
