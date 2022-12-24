@@ -1,4 +1,8 @@
 .FinancialGoalCalculator{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
     input,select,.input-group {
         width: 80%;
         margin: auto;
