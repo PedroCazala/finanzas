@@ -1,18 +1,38 @@
-import React from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import './Aside.scss'
+import "./Aside.scss";
 
 function Aside() {
-    return (
-        <aside className="">
-            <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-            <div className="container-fluid">
+    const [valueAside, setValueAside] = useState(true);
 
-                <NavLink to="/" className="navbar-brand" >HOME</NavLink>
-                <NavLink to="/contar-efectivo" className="navbar-brand" > Contar Efectivo</NavLink>
-            </div>
-            </nav>
-        </aside>
+    const onChangeValueAside=():void=>{
+        setValueAside(!valueAside)
+    }
+    return (
+        <div className="aside">
+            {
+                !valueAside
+                ?
+                    <aside className= "bg-primary menu">
+                        <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+                            <div className="container-fluid">
+                                <NavLink to="/" className="navbar-brand" onClick={()=>onChangeValueAside()}>
+                                    HOME
+                                </NavLink>
+                                <NavLink to="/contar-efectivo" className="navbar-brand" onClick={()=>onChangeValueAside()}>
+                                    {" "}
+                                    Contar Efectivo
+                                </NavLink>
+                            </div>
+                        </nav>
+                    </aside>
+                :
+                    <></>
+            }
+            <button className="btn btn-primary" onClick={()=>onChangeValueAside()}>
+                {valueAside ? "abrir" : "cerrar"}
+            </button>
+        </div>
     );
 }
 

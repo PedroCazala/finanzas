@@ -1,12 +1,24 @@
-aside{
-    height: 100vh;
+.aside{
     position:fixed;
+    display: flex;
 
-    div{
-        display: flex;
-        flex-flow: column;
-        a{
-            text-decoration: none;
+    height: 100vh;
+    button{
+        border-radius: 0;
+        transition: width 2s 2s;
+    }
+    .menu{
+        width: 80vw;
+        transition: width 2s 2s;
+        nav{
+            border: none;
+            div{
+                display: flex;
+                flex-flow: column;
+                a{
+                    text-decoration: none;
+                }
+            }
         }
     }
 }
