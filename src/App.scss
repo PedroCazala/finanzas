@@ -6,19 +6,20 @@
 .App {
   text-align: center;
   height: 100vh;
-  font-size: 2rem;
+  font-size: 1.5rem;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   main{
     width: 100vw;
+    height: 100%;
     padding-left: 6vw;
   }
 }
 @media only screen and (max-width: 600px) {
   .App{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     main{
       padding-left: 10vw;
     }
