@@ -51,11 +51,13 @@ function CountCash() {
     ]);
     return (
         <div className="CountCash">
-            <button className="btn btn-lg btn-primary" type="button" onClick={() => reset()}>Reset</button>
+            <button className="btn btn-lg btn-danger btnReset" type="button" onClick={() => reset()}>Reset</button>
             <ul>
                 <li>
                     <label htmlFor="1000">$1000</label>
                     <input
+                    className="form-control"
+                        placeholder='Cantidad'
                         type="number"
                         value={mil === 0 ? "" : mil}
                         id="1000"
@@ -69,6 +71,8 @@ function CountCash() {
                 <li>
                     <label htmlFor="500">$500</label>
                     <input
+                    className="form-control"
+                        placeholder='Cantidad'
                         type="number"
                         value={quinientos === 0 ? "" : quinientos}
                         id="500"
@@ -82,6 +86,8 @@ function CountCash() {
                 <li>
                     <label htmlFor="200">$200</label>
                     <input
+                    className="form-control"
+                        placeholder='Cantidad'
                         type="number"
                         value={doscientos === 0 ? "" : doscientos}
                         id="200"
@@ -95,6 +101,8 @@ function CountCash() {
                 <li>
                     <label htmlFor="100">$100</label>
                     <input
+                    className="form-control"
+                        placeholder='Cantidad'
                         type="number"
                         value={cien === 0 ? "" : cien}
                         id="100"
@@ -108,6 +116,8 @@ function CountCash() {
                 <li>
                     <label htmlFor="50">$50</label>
                     <input
+                    className="form-control"
+                        placeholder='Cantidad'
                         type="number"
                         value={cincuenta === 0 ? "" : cincuenta}
                         id="50"
@@ -123,6 +133,8 @@ function CountCash() {
                 <li>
                     <label htmlFor="20">$20</label>
                     <input
+                    className="form-control"
+                        placeholder='Cantidad'
                         type="number"
                         value={veinte === 0 ? "" : veinte}
                         id="20"
@@ -138,6 +150,8 @@ function CountCash() {
                 <li>
                     <label htmlFor="10Billete">$10</label>
                     <input
+                    className="form-control"
+                        placeholder='Cantidad'
                         type="number"
                         value={diesBillete === 0 ? "" : diesBillete}
 
@@ -156,6 +170,8 @@ function CountCash() {
                 <li>
                     <label htmlFor="10Moneda">$10</label>
                     <input
+                    className="form-control"
+                        placeholder='Cantidad'
                         type="number"
                         value={diesMonedas === 0 ? "" : diesMonedas}
                         id="10Moneda"
@@ -171,7 +187,7 @@ function CountCash() {
                     />
                 </li>
             </ul>
-            <p className="text-warning">total ${total}</p>
+            <p className="text-success">total ${total}</p>
         </div>
     );
 }

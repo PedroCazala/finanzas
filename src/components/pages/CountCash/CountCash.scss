@@ -1,15 +1,22 @@
 .CountCash {
+    .btnReset{
+        width: 100%;
+        border-radius: 0;
+    }
     ul {
         width: 80%;
         margin: auto;
         padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
         li {
             list-style: none;
             display: flex;
-            flex-flow: row wrap;
+            flex-flow: row nowrap;
             justify-content: center;
             input {
-                width: 100%;
+                width: 7rem;
             }
             label {
                 width: 9rem;
