@@ -72,22 +72,11 @@ function FinancialGoalCalculator() {
                 </div>
                 <button className="btn btn-primary"> Calcular </button>
             </form>
-            {percentage ? <p>percentage: {JSON.stringify(percentage)}</p> : ""}
-            {desiredProfit ? (
-                <p>desiredProfit: {JSON.stringify(desiredProfit)}</p>
-            ) : (
-                ""
-            )}
-            {periodicity ? (
-                <p>periodicity: {JSON.stringify(periodicity)}</p>
-            ) : (
-                ""
-            )}
             {necessaryMoney ? (
                 <p>
-                    Necesitas: <b>${JSON.stringify(necessaryMoney.toFixed(2))}</b>, para
+                    Necesitas: <b className="text-primary">${necessaryMoney.toFixed(2)}</b>, para
                     obtener una ganancia {periodicity === "monthly" && "mensual"}
-                    {periodicity === "annually" && "anual"} de {JSON.stringify(desiredProfit)}
+                    {periodicity === "annually" && "anual"} de ${JSON.stringify(desiredProfit)}
                 </p>
             ) : (
                 ""
