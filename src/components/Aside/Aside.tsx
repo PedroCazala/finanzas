@@ -35,6 +35,13 @@ function Aside() {
                             >
                                 Calculadora de meta financiera
                             </NavLink>
+                            <NavLink
+                                to="/dividir-gastos"
+                                className="navbar-brand"
+                                onClick={() => onChangeValueAside()}
+                            >
+                                Dividir gastos
+                            </NavLink>
                         </div>
                     </nav>
                 </aside>

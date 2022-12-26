@@ -5,6 +5,7 @@ import Aside from "./components/Aside/Aside";
 import CountCash from "./components/pages/CountCash/CountCash";
 import FinancialGoalCalculator from "./components/pages/FinancialGoalCalculator/FinancialGoalCalculator";
 import Index from "./components/pages/Index/Index";
+import SplitMoney from "./components/pages/SplitMoney/SplitMoney";
 
 function App() {
     return (
@@ -24,6 +25,10 @@ function App() {
                         <Route
                             path="/meta-financiera"
                             element={<FinancialGoalCalculator />}
+                        />
+                        <Route
+                            path="/dividir-gastos"
+                            element={<SplitMoney/>}
                         />
                     </Routes>
                 </main>

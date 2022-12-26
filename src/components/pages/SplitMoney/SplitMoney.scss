@@ -1,0 +1,12 @@
+.SplitMoney{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+    
+    form{
+       width: 90%;
+    }
+}
