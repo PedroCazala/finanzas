@@ -1,26 +1,48 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import AddParticipants from "./AddParticipants";
 
 function AddParticipantsContainer() {
-    const addParticipants = (e: React.MouseEvent) => {
-        e.preventDefault();
+    const [quantityParticipants, setQuantityParticipants] = useState(1);
+    const addParticipants = () => {
+        setQuantityParticipants(quantityParticipants + 1);
     };
+
     return (
-        <div>
-            <AddParticipants />
-            <button
-                className="btn btn-success"
-                // onClick={(e) => addParticipants(e)}
-            >
-                +
-            </button>
+        <>
+            {[...Array(quantityParticipants)].map((_, i) => (
+                <AddParticipants number={quantityParticipants} key={i} />
+            ))}
+            <div>
+                <div>
+                    <button
+                        className="btn btn-outline-success"
+                        onClick={() => addParticipants()}
+                    >
+                        +
+                    </button>
+                    <button
+                        type="button"
+                        className="btn btn-outline-warning"
+                        onClick={() => setQuantityParticipants(1)}
+                    >
+                        Restablecer
+                    </button>
+                </div>
+                
+                <button
+                    className="btn btn-outline-primary"
+                    // onClick={() => addParticipants()}
+                >
+                    Añadir participantes extras
+                </button>
+            </div>
             <button
                 className="btn btn-primary"
-                onClick={(e) => addParticipants(e)}
+                // onClick={(e) => addParticipants(e)}
             >
                 Listo
             </button>
-        </div>
+        </>
     );
 }
 

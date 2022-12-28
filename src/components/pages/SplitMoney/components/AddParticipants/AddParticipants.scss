@@ -1,9 +1,23 @@
 .AddParticipants{
-    border: solid 2px ;
-    .form-group{
-        display: flex;
-        input{
-            margin: auto;
+    // border: solid 2px ;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 90%;
+    .card-header{
+        width: 100%;
+    }
+    .card-body{
+        width: 100%;
+        .form-group{
+            display: flex;
+            width: 100%;
+            label{
+                width: 100%;
+            }
+            input{
+                margin: auto;
+            }
         }
     }
 }

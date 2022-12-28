@@ -1,28 +1,44 @@
-import { useState } from 'react';
-import AddParticipantsContainer from './components/AddParticipants/AddParticipantsContainer';
-import './SplitMoney.scss'
+import { useState } from "react";
+import AddParticipantsContainer from "./components/AddParticipants/AddParticipantsContainer";
+import JustSplit from "./components/JustSplit/JustSplit";
+import "./SplitMoney.scss";
 
-interface participants{
-    name:string,
-    totalSpentMoney?:number
-    detalleSpentMoney?:detalleSpentMoney[]
+interface participants {
+    name: string;
+    totalSpentMoney?: number;
+    detalleSpentMoney?: detalleSpentMoney[];
 }
-interface detalleSpentMoney{
-    spent:string,
-    price:number
+interface detalleSpentMoney {
+    spent: string;
+    price: number;
 }
 function SplitMoney() {
-    const detalleParticipants = useState<Boolean>()
-    const [participants,setParticipants] = useState<participants[]>()
-    
-    return <div className='SplitMoney'>
-        <>
-        <button className='btn btn-secondary'>
-            Solo quiero ingresar la cantidad total de participantes
-        </button>
-        <AddParticipantsContainer/>
-        </>
-    </div>;
+    const [detalleParticipants, setDetalleParticipants] = useState<Boolean>(true);
+    const [participants, setParticipants] = useState<participants[]>();
+
+    return (
+        <div className="SplitMoney">
+            <>
+                <button
+                    className="btn btn-secondary"
+                    onClick={()=>setDetalleParticipants(!detalleParticipants)}
+                >
+                    {detalleParticipants
+                    ?
+                        'Solo quiero ingresar la cantidad total de participantes'
+                    :
+                        'Quiero detallar lo que gasto cada participante'
+                    }
+                </button>
+                {detalleParticipants
+                    ?
+                        <AddParticipantsContainer />
+                    :
+                        <JustSplit/>
+                }
+            </>
+        </div>
+    );
 }
 
 export default SplitMoney;
